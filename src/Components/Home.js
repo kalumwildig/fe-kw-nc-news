@@ -12,17 +12,18 @@ const Home = () => {
 
     useEffect(() => {
         setIsLoading(true)
-        fetchAllArticles().then((data) => setNewsItems(data))
-        setIsLoading(false)
-    })
+        fetchAllArticles().then((data) => {setNewsItems(data)
+            setIsLoading(false)})
+        
+    }, [])
 
 
     if (isLoading) {return <h3>.....loading</h3>}
 
 
     return (
-        <div>
-            <ul>
+        <div className="all-news-body">
+            <ul className="all-list-items">
             <AllNewsItems newsItems={newsItems}/>
             </ul>
         </div>
