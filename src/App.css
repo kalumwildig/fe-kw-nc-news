@@ -71,6 +71,10 @@ body {
   color: rgb(92, 92, 92);;
 }
 
+.all-news-list h6:hover {
+  text-decoration: underline;
+}
+
 .navbar__container {
   display: flex;
   justify-content: space-between;
