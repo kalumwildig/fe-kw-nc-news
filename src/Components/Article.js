@@ -28,10 +28,10 @@ const Article = () => {
         <p>{article.body}</p>
         </div>
         <div className="vote-divider">
-            {article.votes}
+        👍🏻 {article.votes}
         </div>
         <div className="comment-divider">
-            <h4>Comments: {article.comment_count}</h4>
+        <h4>Comments: {article.comment_count}</h4>
         </div>
         </>
     )

@@ -46,16 +46,22 @@ h3{
 .article-card p {
   margin-top: 15px;
   padding-bottom: 15px;
+  margin-left: 10px;
 }
 
 .vote-divider {
-  color: white;
+  color: rgba(100%, 0%, 0%, 0);
+  text-shadow: 0 0 0 white;
   margin: 4px;
   background-color: rgb(46, 46, 46);
   border-radius: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
   margin-top: 5px;
+}
+
+.card-link {
+  text-decoration-line: none;
 }
 
 .comment-divider {
@@ -78,12 +84,15 @@ h3{
 .all-news-list  {
   display: flex;
   flex-direction: column;
-  border: 2px solid black;
   border-radius: 5px;
   width: 32vw;
   margin: 5px;
   background-color:rgb(46, 46, 46);
   min-height: 20vh;
+}
+
+.all-news-list:hover {
+  box-shadow: 0 2px 2px 2px rgba(216, 216, 216, 0.315)
 }
 
 .all-news-list h3 {
@@ -319,6 +328,11 @@ h3{
     height: fit-content;
     display: inline-flex;
   }
+
+  .all-news-list:hover {
+    box-shadow: 0 2px 2px 2px rgba(216, 216, 216, 0.315)
+  }
+
 
   .all-news-list h3 {
     padding: 5px;
