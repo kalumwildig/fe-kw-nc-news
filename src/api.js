@@ -11,6 +11,13 @@ export function fetchAllArticles () {
       });
 }
 
+
+export function fetchArticle (id) {
+    return api.get(`/articles/${id}`).then(({ data }) => {
+        return data.article;
+    });
+}
+
 export function fetchAllArticlesByTopic (topic) {
     return api.get(`/articles?topic=${topic}`).then(({ data }) => {
         return data.articles;
