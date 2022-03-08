@@ -10,7 +10,6 @@ const Article = () => {
     useEffect(() => {
         setIsLoading(true);
         fetchArticle(article_id).then((data) => {
-            console.log(data)
             setArticle(data)
             setIsLoading(false)
         })

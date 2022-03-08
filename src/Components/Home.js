@@ -11,8 +11,8 @@ const Home = () => {
     useEffect(() => {
         setIsLoading(true)
         fetchAllArticles().then((data) => {setNewsItems(data)
-        })
-        setIsLoading(false)
+            setIsLoading(false)
+        }) 
     }, [])
 
     if (isLoading) {return <h3>.....loading</h3>}
