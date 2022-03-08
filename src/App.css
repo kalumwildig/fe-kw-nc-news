@@ -50,14 +50,28 @@ h3{
 }
 
 .vote-divider {
-  color: rgba(100%, 0%, 0%, 0);
-  text-shadow: 0 0 0 white;
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
   margin: 4px;
   background-color: rgb(46, 46, 46);
   border-radius: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
   margin-top: 5px;
+}
+
+.vote-divider button {
+  border: none;
+  background-color: rgb(46, 46, 46);
+  color: rgba(100%, 0%, 0%, 0);
+  text-shadow: 0 0 0 white;
+  cursor: pointer;
+}
+
+.vote-divider .active {
+  color: rgba(100%, 0%, 0%, 0);
+  text-shadow: 0 0 0 #2f80ed;;
 }
 
 .card-link {
@@ -218,7 +232,7 @@ h3{
 }
 
 .navbar__links:hover {
-  color: rgb(3, 19, 165);
+  color: rgb(144, 153, 236);
   transition: all 0.3s ease;
 }
 
