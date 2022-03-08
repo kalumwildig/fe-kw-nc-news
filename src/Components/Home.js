@@ -6,7 +6,7 @@ import AllNewsItems from "./AllNewsItems";
 const Home = () => {
     const [newsItems, setNewsItems] = useState([]);
     const [sortBy, setSortBy] = useState()
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
 
 
 

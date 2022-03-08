@@ -10,3 +10,10 @@ export function fetchAllArticles () {
         return data.articles;
       });
 }
+
+
+export function fetchArticle (id) {
+    return api.get(`/articles/${id}`).then(({ data }) => {
+        return data.article;
+      });
+}

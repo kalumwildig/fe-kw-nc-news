@@ -22,6 +22,50 @@ body {
   z-index: 999;
 }
 
+h3{
+  color: white;
+}
+
+.article-card {
+  color: white;
+  margin: 4px;
+  background-color: rgb(46, 46, 46);
+  border-radius: 5px;
+}
+
+.article-card h2 {
+  margin: 10px;
+}
+
+.article-card h4 {
+  margin: 5px;
+  margin-left: 10px;
+}
+
+.article-card p {
+  margin-top: 15px;
+  padding-bottom: 15px;
+}
+
+.vote-divider {
+  color: white;
+  margin: 4px;
+  background-color: rgb(46, 46, 46);
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+}
+
+.comment-divider {
+  color: white;
+  margin: 4px;
+  background-color: rgb(46, 46, 46);
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+}
 
 .all-list-items {
   display: grid;
