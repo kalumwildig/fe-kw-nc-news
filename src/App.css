@@ -68,6 +68,11 @@ h3{
   text-shadow: 0 0 0 white;
 }
 
+.vote-divider .active {
+  color: rgba(100%, 0%, 0%, 0);
+  text-shadow: 0 0 0 #2f80ed;;
+}
+
 .card-link {
   text-decoration-line: none;
 }
