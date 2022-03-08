@@ -66,6 +66,7 @@ h3{
   background-color: rgb(46, 46, 46);
   color: rgba(100%, 0%, 0%, 0);
   text-shadow: 0 0 0 white;
+  cursor: pointer;
 }
 
 .vote-divider .active {
@@ -231,7 +232,7 @@ h3{
 }
 
 .navbar__links:hover {
-  color: rgb(3, 19, 165);
+  color: rgb(144, 153, 236);
   transition: all 0.3s ease;
 }
 

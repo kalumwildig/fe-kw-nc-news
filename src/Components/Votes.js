@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import { patchVotes } from "../api";
-import Article from "./Article";
 
 const Votes = ({ article }) => {
   const [voteCount, setVoteCount] = useState(article.votes);
@@ -9,6 +8,11 @@ const Votes = ({ article }) => {
   const [isDislikeActive, setIsDislikeActive] = useState(false);
   const [classActive, setClassActive] = useState(false);
   const [classDisActive, setClassDisActive] = useState(false);
+
+
+
+  ///code below handles patch and optimistic rendering for when a user hits the like button, conditional logic is applied as to what the current state is
+
 
   const adjustVotesLike = () => {
     if (!isLikeActive && votesState === 0) {
@@ -41,6 +45,9 @@ const Votes = ({ article }) => {
     });
   };
 
+
+   ///code below handles patch and optimistic rendering for when a user hits the dislike button, conditional logic is applied as to what the current state is
+  
   const adjustVotesDislike = () => {
     if (!isDislikeActive && votesState === 0) {
       setVoteCount((current) => current - 1);
@@ -70,6 +77,8 @@ const Votes = ({ article }) => {
         : current;
     });
   };
+
+
 
   return (
     <>
