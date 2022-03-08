@@ -6,7 +6,7 @@ import AllNewsItems from "./AllNewsItems";
 const Topics = () => {
     const [newsItems, setNewsItems] = useState([]);
     const [sortBy, setSortBy] = useState()
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
 
     const {topic} = useParams()
 

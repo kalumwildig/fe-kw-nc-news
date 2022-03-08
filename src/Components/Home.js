@@ -6,9 +6,7 @@ import AllNewsItems from "./AllNewsItems";
 const Home = () => {
     const [newsItems, setNewsItems] = useState([]);
     const [sortBy, setSortBy] = useState()
-    const [isLoading, setIsLoading] = useState(false)
-
-
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
         setIsLoading(true)
@@ -16,7 +14,6 @@ const Home = () => {
         })
         setIsLoading(false)
     }, [])
-
 
     if (isLoading) {return <h3>.....loading</h3>}
 
