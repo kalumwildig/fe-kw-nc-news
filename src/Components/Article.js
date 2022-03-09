@@ -35,7 +35,7 @@ const Article = () => {
         <h4>Comments: {article.comment_count}</h4>
       </div>
       <div className="comments-list">
-        <Comments article={article} />
+        <Comments />
       </div>
     </>
   );

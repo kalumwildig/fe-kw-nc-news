@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { fetchComments } from "../api";
 import UserComment from "./UserComment";
 
-const Comments = ({ article }) => {
+const Comments = () => {
   const [comments, setComments] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const {article_id} = useParams()
 
   useEffect(() => {
     setIsLoading(true);
-    fetchComments(article.article_id).then((data) => {
+    fetchComments(article_id).then((data) => {
       setComments(data);
       setIsLoading(false);
     });
@@ -19,7 +21,6 @@ const Comments = ({ article }) => {
   }
 
   return (
-    <>
       <ul>
         {comments.map((comment) => {
           return (<li className="comment-list-container" key={comment.comment_id}>
@@ -27,7 +28,6 @@ const Comments = ({ article }) => {
           </li>);
         })}
       </ul>
-    </>
   );
 };
 
