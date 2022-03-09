@@ -9,7 +9,7 @@ const UserComment = ({ comment }) => {
     setIsLoading(true);
     fetchUserByUserName(comment.author).then((data) => {setUser(data)
     setIsLoading(false)});
-  }, []);
+  }, [comment.author]);
 
   if (isLoading) {
     return <h3>Loading...</h3>;

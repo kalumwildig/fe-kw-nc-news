@@ -14,7 +14,7 @@ const Comments = () => {
       setComments(data);
       setIsLoading(false);
     });
-  }, []);
+  }, [article_id]);
 
   if (isLoading) {
     return <h3>Loading...</h3>;
