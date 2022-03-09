@@ -15,7 +15,6 @@ const UserComment = ({ comment }) => {
     return <h3>Loading...</h3>;
   }
 
-  console.log(comment)
   return (
     <>
       <div className="user-comment">
