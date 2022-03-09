@@ -1,9 +1,12 @@
 import { useState} from "react";
 import { patchVotes } from "../api";
+import { useContext } from "react";
+import { UserContext } from "./Context.js/UserContext";
 
 const Votes = ({ article }) => {
   const [voteCount, setVoteCount] = useState(article.votes);
   const [votesState, setVotesState] = useState(0);
+  const {loggedInUser} = useContext(UserContext)
 
   ///code below handles patch and optimistic rendering for when a user hits the like button, conditional logic is applied as to what the current state is
   const adjustVotesLike = () => {
@@ -61,6 +64,7 @@ const Votes = ({ article }) => {
         onClick={() => {
           adjustVotesLike();
         }}
+        disabled = {loggedInUser ? false : true}
       >
         👍🏻
       </button>
@@ -69,6 +73,7 @@ const Votes = ({ article }) => {
         onClick={() => {
           adjustVotesDislike();
         }}
+        disabled = {loggedInUser ? false : true}
       >
         👎🏻
       </button>

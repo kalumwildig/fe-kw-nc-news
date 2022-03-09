@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 const AllNewsItems = ({ newsItems }) => {
   return newsItems.map((item) => {
     return (
-      <li className="all-news-list">
+      <li className="all-news-list" key={item.article_id}>
         <Link
-          key={item.article_id}
           className="card-link"
           to={`/topics/${item.topic}/article/${item.article_id}`}
         >

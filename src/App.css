@@ -9,6 +9,7 @@
 body {
   background-color: black;
   overflow-y: auto;
+  position: relative;
 }
 
 .navbar {
@@ -86,6 +87,69 @@ h3{
   color: white;
 }
 
+.account-log {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-log img {
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+}
+
+.account-log h4 {
+  color: white;
+  padding: 10px;
+}
+
+.account-log button {
+  border-radius: 5px;
+  height: 5vh;
+  width: 50vw;
+  background-color: rgb(46, 46, 46);
+  color: white;
+}
+
+.log-in-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  height: 80vh;
+}
+
+.log-in-input input {
+  background-color: rgb(88, 88, 88);
+  border-radius: 5px;
+  height: 5vh;
+  width: 50vw;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.log-in-input input::placeholder {
+  color: white;;
+}
+
+.log-in-input button {
+  border-radius: 5px;
+  height: 5vh;
+  width: 50vw;
+  background-color: rgb(46, 46, 46);
+  color: white;
+}
+
+.err-on-login {
+  color: white;
+  font-size: 2vh;
+  text-align: center;
+}
+
 .comment-divider {
   color: white;
   margin: 4px;
@@ -99,6 +163,69 @@ h3{
 .comment-divider h4 {
   margin-left: 10px;
 }
+
+.post-comment {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: rgb(46, 46, 46);
+  border-radius: 5px;
+  z-index: 99;
+  border-top: 1px solid rgb(168, 168, 168);
+}
+
+.post-comment input {
+  margin-top: 5px;
+  width: 95vw;
+  height: 3vh;
+  border-radius: 10px;
+  padding: 2px;
+}
+
+.post-comment button {
+  margin-bottom: 10px;
+  width: 95vw;
+  margin-top: 5px;
+  background-color: rgb(109, 109, 109);
+  color: white;
+  border-radius: 10px;
+  border: none;
+  padding: 2px;
+} 
+
+.post-comment button:hover {
+  cursor: pointer;
+}
+
+.success-container {
+  position: absolute; 
+  background-color: greenyellow;
+  top: 50vh; 
+  animation: show-success 5s ease forwards; 
+  color: darkgreen;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+@keyframes show-success {
+  0% {
+    transform: translateX(100%);
+  }
+  10% {
+    transform: translateX(-10%);
+  }
+  20% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(10000%);
+  }
+}
+
 
 .all-list-items {
   display: grid;
@@ -163,6 +290,10 @@ h3{
 
 .comments-list {
   color: white;
+}
+
+.comments-list ul{
+  position: relative;
 }
 
 .comment-list-container {
@@ -335,7 +466,7 @@ h3{
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
     background: #2f80ed;
   }
 
@@ -423,4 +554,23 @@ h3{
     align-items: center;
   }
 
+  .log-in-input input {
+    height: 5vh;
+    width: 65vw;
+  }
+  
+  .log-in-input button {
+    height: 5vh;
+    width: 65vw;
+  }
+
+  .account-log img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .post-comment {
+    position: sticky;
+    bottom: 0;
+  }
 }

@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { fetchArticle } from "../api";
-import PostComment from "./PostComment";
 import Votes from "./Votes";
 import Comments from "./Comments"
 
@@ -32,15 +31,7 @@ const Article = () => {
       <div className="vote-divider">
         <Votes article={article} />
       </div>
-      <div className="comment-divider">
-        <h4>Comments: {article.comment_count}</h4>
-        </div>
-        <div className="comments-list">
         <Comments />
-      </div>
-        <div className="poset-comment">
-        <PostComment article={article}/>
-        </div>
     </>
   );
 };

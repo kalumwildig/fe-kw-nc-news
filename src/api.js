@@ -36,12 +36,6 @@ export function postComment(id, commentData) {
   });
 }
 
-export function patchVotes (id, number) {
-    return api.patch(`/articles/${id}`, {inc_votes: number}).then(({data}) => {
-        return data;
-    })
-}
-
 export function fetchComments (id) {
     return api.get(`/articles/${id}/comments`).then(({data}) => {
         return data.comments;

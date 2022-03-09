@@ -25,7 +25,7 @@ const Header = () => {
             <span className="bar"> </span>
             <span className="bar"> </span>
           </div>
-          <ul className={`navbar__menu ${isActive ? "active" : ""}`}>
+          <ul onClick={mobileMenu} className={`navbar__menu ${isActive ? "active" : ""}`}>
            <NaviLink topic='Home' />
            <NaviLink topic='Coding' />
            <NaviLink topic='Football' />
