@@ -8,7 +8,7 @@ const NaviLink = ({ topic }) => {
         to={
           topic.toLowerCase() === "home"
             ? "/"
-            : topic.toLowerCase() === "account" || "user profile"
+            : topic.toLowerCase() === "account" || topic.toLowerCase() ===  "user profile"
             ? `/accounts`
             : `/topics/${topic.toLowerCase()}/articles`
         }

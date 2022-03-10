@@ -47,3 +47,9 @@ export function fetchUserByUserName (name) {
         return data.user;
     })
 }
+
+export function deleteComments (id) {
+  return api.delete(`/comments/${id}`).then((res) => {
+   return res;
+  })
+}
