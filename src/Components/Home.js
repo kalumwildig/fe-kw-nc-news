@@ -15,7 +15,7 @@ const Home = () => {
         }) 
     }, [])
 
-    if (isLoading) {return <div className="overall-loading" >Loading <div class="loader"></div></div>;}
+    if (isLoading) {return <div className="overall-loading" ><h3>Loading </h3> <div class="loader"></div></div>;}
 
 
     return (
