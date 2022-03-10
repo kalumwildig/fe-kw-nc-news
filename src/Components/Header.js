@@ -1,9 +1,11 @@
-import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { Link  } from "react-router-dom";
+import { useState, useContext} from "react";
 import NaviLink from "./NavLink";
+import { UserContext } from "./Context.js/UserContext";
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
+  const {loggedInUser} = useContext(UserContext)
 
   const mobileMenu = () => {
     setIsActive(!isActive);
@@ -25,12 +27,12 @@ const Header = () => {
             <span className="bar"> </span>
             <span className="bar"> </span>
           </div>
-          <ul className={`navbar__menu ${isActive ? "active" : ""}`}>
+          <ul onClick={mobileMenu} className={`navbar__menu ${isActive ? "active" : ""}`}>
            <NaviLink topic='Home' />
            <NaviLink topic='Coding' />
            <NaviLink topic='Football' />
            <NaviLink topic='Cooking' />
-           <NaviLink topic='Account' />
+           <NaviLink topic={loggedInUser ? "User Profile" : 'Account'} />
           </ul>
         </div>
       </nav>

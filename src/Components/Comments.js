@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchComments } from "../api";
 import UserComment from "./UserComment";
+import PostComment from "./PostComment";
 
 const Comments = () => {
   const [comments, setComments] = useState([]);
@@ -21,6 +22,11 @@ const Comments = () => {
   }
 
   return (
+    <>
+    <div className="comment-divider">
+        <h4>Comments: {comments.length}</h4>
+        </div>
+        <div className="comments-list">
       <ul>
         {comments.map((comment) => {
           return (<li className="comment-list-container" key={comment.comment_id}>
@@ -28,6 +34,9 @@ const Comments = () => {
           </li>);
         })}
       </ul>
+      </div>
+      <PostComment setComments={setComments}/>
+      </>
   );
 };
 

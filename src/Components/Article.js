@@ -31,14 +31,10 @@ const Article = () => {
       <div className="vote-divider">
         <Votes article={article} />
       </div>
-      <div className="comment-divider">
-        <h4>Comments: {article.comment_count}</h4>
-      </div>
-      <div className="comments-list">
         <Comments />
-      </div>
     </>
   );
 };
 
 export default Article;
+
