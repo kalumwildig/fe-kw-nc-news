@@ -18,7 +18,7 @@ const Topics = () => {
         
     }, [topic])
 
-    if (isLoading) {return <h3>.....loading</h3>}
+    if (isLoading) {return <div className="overall-loading" >Loading <div class="loader"></div></div>;}
 
     return (
         <div className="all-news-body">

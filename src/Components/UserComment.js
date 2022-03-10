@@ -20,6 +20,7 @@ const UserComment = ({ comment, setComments, setIsDelete }) => {
   }, [comment.author]);
 
   const deleteComment = () => {
+    setIsDelete(false)
     deleteComments(comment.comment_id)
       .then((res) => {
         if (res.status === 204) {
@@ -39,7 +40,7 @@ const UserComment = ({ comment, setComments, setIsDelete }) => {
   };
 
   if (isLoading) {
-    return <h3>Loading...</h3>;
+    return <div className="overall-loading" >Loading <div class="loader"></div></div>;
   }
 
   return (

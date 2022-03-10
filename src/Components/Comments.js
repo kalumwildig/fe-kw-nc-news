@@ -19,7 +19,7 @@ const Comments = () => {
   }, [article_id]);
 
   if (isLoading) {
-    return <h3>Loading...</h3>;
+    return <div className="overall-loading" >Loading <div class="loader"></div></div>;;
   }
 
   return (

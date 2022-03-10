@@ -18,7 +18,7 @@ const Article = () => {
   }, [article_id]);
 
   if (isLoading) {
-    return <h3>.....loading</h3>;
+    return <div className="overall-loading" > <h3>Loading <div class="loader"></div> </h3></div>;
   }
 
   return (
