@@ -6,6 +6,10 @@
   scroll-behavior: smooth;
 }
 
+.app {
+  position: relative;
+}
+
 body {
   background-color: black;
   overflow-y: auto;
@@ -207,13 +211,26 @@ h3{
 }
 
 .success-container {
-  background-color: greenyellow;
+  position: sticky;
+  width: fit-content;
   margin-top: -50vh;
+  background-color: greenyellow;
   animation: show-success 4s ease;
   color: darkgreen;
   border-radius: 5px;
   padding: 5px;
   z-index: 999;
+}
+
+.delete-container {
+  position: sticky;
+  background-color: rgb(248, 161, 161);
+  color: red;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 5px;
+  z-index: 999;
+  transition: all 0.5 ease ;
 }
 
 @keyframes show-success {
@@ -333,6 +350,7 @@ h3{
 }
 
 .user-comment {
+  position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -343,6 +361,23 @@ h3{
 }
 .user-comment h4 {
   margin-left: 4px;
+}
+
+.user-comment button {
+  color: white;
+}
+
+.user-comment button:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .comment-body-and-votes {

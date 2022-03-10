@@ -6,6 +6,7 @@ import PostComment from "./PostComment";
 
 const Comments = () => {
   const [comments, setComments] = useState([]);
+  const [isDelete, setIsDelete] = useState(false)
   const [isLoading, setIsLoading] = useState(true);
   const {article_id} = useParams()
 
@@ -30,12 +31,13 @@ const Comments = () => {
       <ul>
         {comments.map((comment) => {
           return (<li className="comment-list-container" key={comment.comment_id}>
-            <UserComment comment={comment} />
+            <UserComment comment={comment} setComments={setComments} setIsDelete={setIsDelete} />
           </li>);
         })}
       </ul>
       </div>
       <PostComment setComments={setComments}/>
+      {isDelete ? <div className="delete-container"><h4>Success: Comment successfully delete</h4></div> : null}
       </>
   );
 };
