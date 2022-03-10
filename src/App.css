@@ -168,7 +168,7 @@ h3{
 }
 
 .post-comment {
-  position: fixed;
+  position: sticky;
   bottom: 0;
   display: flex;
   flex-direction: column;
@@ -209,7 +209,7 @@ h3{
 .success-container {
   background-color: greenyellow;
   margin-top: -50vh;
-  animation: show-success 5s ease;
+  animation: show-success 4s ease;
   color: darkgreen;
   border-radius: 5px;
   padding: 5px;
@@ -224,6 +224,9 @@ h3{
     transform: translateX(-10%);
   }
   20% {
+    transform: translateX(0%);
+  }
+  70% {
     transform: translateX(0%);
   }
   100% {
