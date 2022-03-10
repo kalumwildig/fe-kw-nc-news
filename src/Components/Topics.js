@@ -6,7 +6,8 @@ import SortBy from "./SortBy";
 
 const Topics = () => {
     const [newsItems, setNewsItems] = useState([]);
-    const [isLoading, setIsLoading] = useState(true)
+    const [isLoading, setIsLoading] = useState(true);
+    const [sort, setSort] = useState('');
 
     const {topic} = useParams()
 
@@ -22,7 +23,7 @@ const Topics = () => {
 
     return (
         <>
-        <SortBy setNewsItems={setNewsItems} setIsLoading={setIsLoading}/>
+        <SortBy setNewsItems={setNewsItems} setIsLoading={setIsLoading} sort={sort} setSort={setSort}/>
         <div className="all-news-body">
             <ul className="all-list-items">
             <AllNewsItems newsItems={newsItems}/>

@@ -5,7 +5,7 @@ import Votes from "./Votes";
 import Comments from "./Comments"
 
 const Article = () => {
-  const [article, setArticle] = useState();
+  const [article, setArticle] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const { article_id } = useParams();
 

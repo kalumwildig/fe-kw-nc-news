@@ -10,7 +10,6 @@ export function fetchAllArticles(sortSelect) {
   if (sortSelect?.sortBy && sortSelect?.order) {
     query+=`?sort_by=${sortSelect.sortBy}&order=${sortSelect.order}`
   }
-  console.log(query)
   return api.get(query).then(({ data }) => {
     return data.articles;
   });
@@ -29,7 +28,6 @@ export function fetchAllArticlesByTopic(topic, sortSelect) {
     query+=`&sort_by=${sortSelect.sortBy}&order=${sortSelect.order}`
   }
 
-  console.log(query)
   return api.get(query).then(({ data }) => {
     return data.articles;
   });

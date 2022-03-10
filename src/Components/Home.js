@@ -7,6 +7,7 @@ import SortBy from "./SortBy";
 const Home = () => {
     const [newsItems, setNewsItems] = useState([]);
     const [isLoading, setIsLoading] = useState(true)
+    const [sort, setSort] = useState('');
 
     useEffect(() => {
         setIsLoading(true)
@@ -20,7 +21,7 @@ const Home = () => {
 
     return (
         <>
-        <SortBy setNewsItems={setNewsItems} setIsLoading={setIsLoading}/>
+        <SortBy setNewsItems={setNewsItems} setIsLoading={setIsLoading} sort={sort} setSort={setSort}/>
         <div className="all-news-body">
             <ul className="all-list-items">
             <AllNewsItems newsItems={newsItems}/>
