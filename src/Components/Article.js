@@ -5,7 +5,7 @@ import Votes from "./Votes";
 import Comments from "./Comments"
 
 const Article = () => {
-  const [article, setArticle] = useState();
+  const [article, setArticle] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const { article_id } = useParams();
 
@@ -18,7 +18,7 @@ const Article = () => {
   }, [article_id]);
 
   if (isLoading) {
-    return <div className="overall-loading" ><h3>Loading </h3> <div class="loader"></div></div>;
+    return <div className="overall-loading" ><h3>Loading </h3> <div className="loader"></div></div>;
   }
 
   return (

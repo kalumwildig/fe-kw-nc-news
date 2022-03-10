@@ -4,8 +4,13 @@ const api = axios.create({
   baseURL: "https://kalum-nc-new-app.herokuapp.com/api",
 });
 
-export function fetchAllArticles() {
-  return api.get("/articles").then(({ data }) => {
+export function fetchAllArticles(sortSelect) {
+  let query = '/articles'
+
+  if (sortSelect?.sortBy && sortSelect?.order) {
+    query+=`?sort_by=${sortSelect.sortBy}&order=${sortSelect.order}`
+  }
+  return api.get(query).then(({ data }) => {
     return data.articles;
   });
 }
@@ -16,8 +21,14 @@ export function fetchArticle(id) {
   });
 }
 
-export function fetchAllArticlesByTopic(topic) {
-  return api.get(`/articles?topic=${topic}`).then(({ data }) => {
+export function fetchAllArticlesByTopic(topic, sortSelect) {
+  let query = `/articles?topic=${topic}`
+
+  if (sortSelect?.sortBy && sortSelect?.order) {
+    query+=`&sort_by=${sortSelect.sortBy}&order=${sortSelect.order}`
+  }
+
+  return api.get(query).then(({ data }) => {
     return data.articles;
   });
 }

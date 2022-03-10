@@ -2,8 +2,8 @@ import { fetchUserByUserName } from "../api";
 import { useState } from "react";
 
 const Accounts = ({ loggedInUser, setLoggedInUser }) => {
-  const [user, setUser] = useState();
-  const [err, setErr] = useState();
+  const [user, setUser] = useState('');
+  const [err, setErr] = useState(null);
 
   const handleUserRequest = () => {
     fetchUserByUserName(user)
