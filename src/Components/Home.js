@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { fetchAllArticles } from "../api";
 import AllNewsItems from "./AllNewsItems";
+import SortBy from "./SortBy";
 
 
 const Home = () => {
     const [newsItems, setNewsItems] = useState([]);
-    const [sortBy, setSortBy] = useState()
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
@@ -15,15 +15,18 @@ const Home = () => {
         }) 
     }, [])
 
-    if (isLoading) {return <div className="overall-loading" ><h3>Loading </h3> <div class="loader"></div></div>;}
+    if (isLoading) {return <div className="overall-loading" ><h3>Loading </h3> <div className="loader"></div></div>;}
 
 
     return (
+        <>
+        <SortBy setNewsItems={setNewsItems} setIsLoading={setIsLoading}/>
         <div className="all-news-body">
             <ul className="all-list-items">
             <AllNewsItems newsItems={newsItems}/>
             </ul>
         </div>
+        </>
     )
 
 }
