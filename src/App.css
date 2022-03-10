@@ -9,6 +9,9 @@
 body {
   background-color: black;
   overflow-y: auto;
+}
+
+#root {
   position: relative;
 }
 
@@ -176,12 +179,13 @@ h3{
   border-radius: 5px;
   z-index: 99;
   border-top: 1px solid rgb(168, 168, 168);
+  animation: show-comment 3s ease forwards;
 }
 
 .post-comment input {
   margin-top: 5px;
   width: 95vw;
-  height: 3vh;
+  height: 4vh;
   border-radius: 10px;
   padding: 2px;
 }
@@ -195,6 +199,7 @@ h3{
   border-radius: 10px;
   border: none;
   padding: 2px;
+  height: 4vh;
 } 
 
 .post-comment button:hover {
@@ -202,13 +207,13 @@ h3{
 }
 
 .success-container {
-  position: absolute; 
   background-color: greenyellow;
-  top: 50vh; 
-  animation: show-success 5s ease forwards; 
+  margin-top: -50vh;
+  animation: show-success 5s ease;
   color: darkgreen;
   border-radius: 5px;
   padding: 5px;
+  z-index: 999;
 }
 
 @keyframes show-success {
@@ -223,6 +228,15 @@ h3{
   }
   100% {
     transform: translateX(10000%);
+  }
+}
+
+@keyframes show-comment {
+  0% {
+    transform: translateY(1000px); 
+  }
+  100% {
+    transform: translateY(0px); 
   }
 }
 
@@ -569,8 +583,12 @@ h3{
     height: 150px;
   }
 
-  .post-comment {
-    position: sticky;
-    bottom: 0;
+
+  .post-comment button {
+    height: 4vh;
+  }
+
+  .post-comment input {
+    height: 4vh;
   }
 }

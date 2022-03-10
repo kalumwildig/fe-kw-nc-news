@@ -20,13 +20,15 @@ const PostComment = ({ setComments }) => {
       });
       setComment('')
       setSuccessful(true)
-      setTimeout(() => {setSuccessful(false)}, 3000)
+      setTimeout(() => {setSuccessful(false)}, 4000)
     });
   };
 
   return loggedInUser ? (
     <>
     <div className="post-comment">
+    {!successful ?
+    <>
      <input
         type="text"
         id="comment"
@@ -40,12 +42,15 @@ const PostComment = ({ setComments }) => {
       disabled={comment.length === 0 || null ? true : false}>
         Add Comment
       </button>
-      {successful ? <div className="success-container"><h4>Success: Comment successfully added</h4></div>: ""}
-      </div>
+      </>
+      :
+      <div className="success-container"><h4>Success: Comment successfully added</h4></div>
+      }
+         </div> 
       
     </>
   ) : (
-    ""
+    null
   );
 };
 
