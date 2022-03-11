@@ -265,7 +265,8 @@ select {
   border-top: 1px solid rgb(168, 168, 168);
   animation: show-comment 2s ease forwards;
   -webkit-animation: show-comment 2s ease forwards;
-  -webkit-backface-visibility: hidden
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .post-comment input {
@@ -315,6 +316,7 @@ select {
     animation: show-success 4s ease forwards;
     -webkit-animation: show-success 4s ease forwards;
     -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .success-container h4 {
@@ -343,7 +345,8 @@ select {
   justify-content: center;
   animation: show-success 4s ease forwards;
   -webkit-animation: show-success 4s ease forwards;
-  -webkit-backface-visibility: hidden
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .delete-container h4 {
