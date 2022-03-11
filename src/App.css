@@ -311,6 +311,7 @@ select {
     display: flex;
     justify-content: center;
     animation: show-success 4s ease forwards;
+    -webkit-animation: show-success 4s ease forwards;
 }
 
 .success-container h4 {
@@ -338,6 +339,7 @@ select {
   display: flex;
   justify-content: center;
   animation: show-success 4s ease forwards;
+  -webkit-animation: show-success 4s ease forwards;;
 }
 
 .delete-container h4 {
@@ -371,6 +373,33 @@ select {
 }
 
 @keyframes show-comment {
+  0% {
+    transform: translateY(1000px); 
+  }
+  100% {
+    transform: translateY(0px); 
+  }
+}
+
+@-webkit-keyframes show-success {
+  0% {
+    transform: translateX(100%);
+  }
+  10% {
+    transform: translateX(-10%);
+  }
+  20% {
+    transform: translateX(0%);
+  }
+  70% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(10000%);
+  }
+}
+
+@-webkit-keyframes show-comment {
   0% {
     transform: translateY(1000px); 
   }
