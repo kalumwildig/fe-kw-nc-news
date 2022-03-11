@@ -52,13 +52,9 @@ const UserComment = ({ comment, setComments, setIsDelete }) => {
           {comment.created_at.replace(/T/g, " ").replace(/:00.000Z/g, "")}
         </h4>
         {loggedInUser?.username === user.username ? (
-          <button
-            onClick={() => {
+            <FontAwesomeIcon  onClick={() => {
               deleteComment();
-            }}
-          >
-            <FontAwesomeIcon className="icon" icon={faCircleXmark} />
-          </button>
+            }} className="icon" icon={faCircleXmark} />
         ) : null}
       </div>
       <div className="comment-body-and-votes">

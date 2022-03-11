@@ -1,3 +1,5 @@
+@import url(https://fonts.google.com/specimen/Playfair+Display);
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -71,6 +73,7 @@ select {
   margin-top: 15px;
   padding-bottom: 15px;
   margin-left: 10px;
+  /* font-family: 'Playfair display'; */
   font-size: 0.8rem;
 }
 
@@ -215,7 +218,8 @@ select {
 
 .err-on-login {
   color: white;
-  font-size: 2vh;
+  font-size: 1.5vh;
+  font-weight: lighter;
   text-align: center;
 }
 
@@ -235,7 +239,7 @@ select {
 .log-in-prompt {
   display: flex;
   justify-content: center;
-  background-color: red;
+  background: linear-gradient(to left, rgb(211, 86, 86), rgb(231, 58, 58));
   font-size: 0.6rem;
   width: fit-content;
   padding: 3px;
@@ -410,7 +414,7 @@ select {
   right: 2px;
   padding: 2px;
   background-color:rgb(46, 46, 46);
-  color: rgb(92, 92, 92);
+  color: rgb(138, 138, 138);
 }
 
 .all-news-list h6 {
@@ -419,7 +423,7 @@ select {
   padding: 2px;
   text-transform: capitalize;
   background-color:rgb(46, 46, 46);
-  color: rgb(92, 92, 92);;
+  color: rgb(138, 138, 138);;
 }
 
 .all-news-list h6:hover {
@@ -479,15 +483,12 @@ select {
   padding-bottom: 10px;
   margin-left: 10px;
 }
-.user-comment h4 {
-  margin-left: 4px;
-}
 
-.user-comment button {
+.user-comment .icon {
   color: white;
 }
 
-.user-comment button:hover {
+.user-comment .icon:hover {
   color: red;
   cursor: pointer;
 }
@@ -523,8 +524,8 @@ select {
 }
 
 #navbar__logo {
-  background-color: #2f80ed;
-  background-image: linear-gradient(to top, #2f80ed 0%, #56ccf2 100%);
+  /* background-color: #2f80ed; */
+  background: linear-gradient(to top, #2f80ed 0%, #56ccf2 100%); 
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;

@@ -37,12 +37,8 @@ const SortBy = ({ setNewsItems, setIsLoading , sort , setSort}) => {
         <option value="Sort" hidden>
           {sort ? sort : "Sort by:"}
         </option>
-        <option value="title-asc">Article Title: A to Z</option>
-        <option value="title-desc">Article Title: Z to A</option>
-        <option value="topic-asc">Topic: A to Z</option>
-        <option value="topic-asc">Topic: Z to A</option>
-        <option value="created_at-desc">Date Created: Newest First</option>
-        <option value="created_at-asc">Date Created: Oldest First</option>
+        <option value="created_at-desc">Newest First</option>
+        <option value="created_at-asc">Oldest First</option>
         <option value="votes-desc">Most Votes</option>
         <option value="votes-asc">Fewest Votes</option>
         <option value="comment_count-desc">Most Comments</option>

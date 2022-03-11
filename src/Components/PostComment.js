@@ -15,6 +15,7 @@ const PostComment = ({ setComments }) => {
       username: loggedInUser.username,
       body: comment,
     }).then((data) => {
+      data.created_at = data.created_at.replace(/T/g, " ").replace(/:\d\d.\d\d\dZ/g, "")
       setComments((current) => {
         return [...current, data ];
       });

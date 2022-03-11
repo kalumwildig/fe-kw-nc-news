@@ -50,7 +50,7 @@ const Accounts = ({ loggedInUser, setLoggedInUser }) => {
         (
         {err ? (
           <div className="err-on-login">
-            We could not find this user, please try again
+            We could not find this user, please try again.
           </div>
         ) : (
           ""
