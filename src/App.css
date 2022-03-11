@@ -193,6 +193,7 @@ select {
   align-items: center;
   flex-grow: 1;
   height: 80vh;
+  font-size: 1rem;
 }
 
 .log-in-input input {
@@ -272,6 +273,7 @@ select {
   height: 4vh;
   border-radius: 10px;
   padding: 2px;
+  font-size: 1rem;
 }
 
 .post-comment button {
@@ -524,9 +526,12 @@ select {
 }
 
 #navbar__logo {
-  /* background-color: #2f80ed; */
-  background: linear-gradient(to top, #2f80ed 0%, #56ccf2 100%); 
-  background-size: 100%;
+  color: #2f80ed;
+}
+
+
+#navbar__logo  {
+  background:  linear-gradient(to top, #2f80ed 0%, #56ccf2 100%); 
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
