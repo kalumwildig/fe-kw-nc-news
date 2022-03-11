@@ -439,7 +439,7 @@ select {
 }
 
 .news-card-lower a {
-  text-decoration-line: none;
+  text-decoration: underline rgb(92, 92, 92);
 }
 
 .comments-list {
