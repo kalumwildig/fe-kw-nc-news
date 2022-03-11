@@ -20,7 +20,6 @@ const UserComment = ({ comment, setComments, setIsDelete }) => {
   }, [comment.author]);
 
   const deleteComment = () => {
-    setIsDelete(false)
     deleteComments(comment.comment_id)
       .then((res) => {
         if (res.status === 204) {

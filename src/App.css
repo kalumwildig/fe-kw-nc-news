@@ -1,4 +1,3 @@
-@import url(https://fonts.google.com/specimen/Playfair+Display);
 
 * {
   box-sizing: border-box;
@@ -73,7 +72,6 @@ select {
   margin-top: 15px;
   padding-bottom: 15px;
   margin-left: 10px;
-  /* font-family: 'Playfair display'; */
   font-size: 0.8rem;
 }
 
@@ -312,7 +310,7 @@ select {
     transition: all 0.5 ease ;
     display: flex;
     justify-content: center;
-    animation: show-success 4s ease ;
+    animation: show-success 4s ease forwards;
 }
 
 .success-container h4 {
@@ -339,7 +337,7 @@ select {
   transition: all 0.5 ease ;
   display: flex;
   justify-content: center;
-  animation: show-success 4s ease ;
+  animation: show-success 4s ease forwards;
 }
 
 .delete-container h4 {
@@ -352,6 +350,7 @@ select {
   height: fit-content;
   padding: 5px;
 }
+
 
 @keyframes show-success {
   0% {
