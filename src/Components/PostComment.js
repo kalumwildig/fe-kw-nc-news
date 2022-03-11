@@ -26,9 +26,10 @@ const PostComment = ({ setComments }) => {
 
   return loggedInUser ? (
     <>
-    <div className="post-comment">
+  
     {!successful ?
     <>
+      <div className="post-comment">
      <input
         type="text"
         id="comment"
@@ -42,11 +43,12 @@ const PostComment = ({ setComments }) => {
       disabled={comment.length === 0 || null ? true : false}>
         Add Comment
       </button>
+      {comment === "" ? <h5>Text is required to post a comment</h5>: null}
+      </div> 
       </>
       :
       <div className="success-container"><h4>Success: Comment successfully added</h4></div>
       }
-         </div> 
       
     </>
   ) : (

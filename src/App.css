@@ -222,7 +222,6 @@ select {
 .comment-divider {
   color: white;
   margin: 4px;
-  /* background-color: rgb(46, 46, 46); */
   border-radius: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -231,6 +230,21 @@ select {
 
 .comment-divider h4 {
   margin-left: 10px;
+}
+
+.log-in-prompt {
+  display: flex;
+  justify-content: center;
+  background-color: red;
+  font-size: 0.6rem;
+  width: fit-content;
+  padding: 3px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.log-in-prompt-link {
+  color: white;
 }
 
 .post-comment {
@@ -268,31 +282,66 @@ select {
   height: 4vh;
 } 
 
+.post-comment h5 {
+  color: #d1d1d1;
+  font-weight: lighter;
+  margin-bottom: 2px;
+}
+
 .post-comment button:hover {
   cursor: pointer;
 }
 
 .success-container {
-  position: sticky;
-  width: fit-content;
-  margin-top: -80vh;
-  background-color: greenyellow;
-  animation: show-success 4s ease;
-  color: darkgreen;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    text-align: center;
+    top: 50vh;
+    background-color: transparent;
+    color: darkgreen;
+    border-radius: 5px;
+    padding: 5px;
+    z-index: 999;
+    transition: all 0.5 ease ;
+    display: flex;
+    justify-content: center;
+    animation: show-success 4s ease ;
+}
+
+.success-container h4 {
+  background-color: rgb(134, 185, 57);
   border-radius: 5px;
-  padding: 5px;
-  z-index: 999;
+  width: fit-content;
+  text-align: center;
+  height: fit-content;
+  padding: 3px;
 }
 
 .delete-container {
-  height: 100%;
-  position: sticky;
-  background-color: rgb(248, 161, 161);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  text-align: center;
+  top: 50vh;
+  background-color: transparent;
   color: red;
   border-radius: 5px;
   padding: 5px;
   z-index: 999;
   transition: all 0.5 ease ;
+  display: flex;
+  justify-content: center;
+  animation: show-success 4s ease ;
+}
+
+.delete-container h4 {
+  background-color: rgb(245, 190, 180);
+  border-radius: 5px;
+  width: fit-content;
+  text-align: center;
+  height: fit-content;
+  padding: 3px;
 }
 
 @keyframes show-success {
