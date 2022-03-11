@@ -4,6 +4,7 @@ import Header from './Components/Header';
 import Home from './Components/Home';
 import Article from './Components/Article'
 import Topics from './Components/Topics';
+import ErrorPage from './Components/Error';
 import { UserContext } from './Components/Context.js/UserContext';
 import {useState} from 'react';
 import Accounts from './Components/Accounts';
@@ -22,6 +23,7 @@ function App() {
             <Route path="/topics/:topic/article/:article_id" element={<Article />} /> 
             <Route path="/topics/:topic/articles" element={<Topics />} />
             <Route path="/accounts" element={<Accounts loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser} />} />
+            <Route path="*" element={<ErrorPage />} />
       </Routes>
       </BrowserRouter>
     </div>
