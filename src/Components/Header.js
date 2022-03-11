@@ -16,7 +16,7 @@ const Header = () => {
       <nav className="navbar">
         <div className="navbar__container">
           <Link to="/" id="navbar__logo">
-           <span> <h2>KW News</h2> </span>
+           <h2>KW News</h2> 
           </Link>
           <div
             onClick={mobileMenu}
