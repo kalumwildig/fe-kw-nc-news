@@ -15,9 +15,11 @@ const Header = () => {
     <>
       <nav className="navbar">
         <div className="navbar__container">
+          <div className="title-navbar">
           <Link to="/" id="navbar__logo">
-           <h2>KW News</h2> 
+          KW News
           </Link>
+          </div>
           <div
             onClick={mobileMenu}
             className={`navbar__toggle ${isActive ? "is-active" : ""}`}

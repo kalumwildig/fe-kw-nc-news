@@ -48,7 +48,7 @@ const PostComment = ({ setComments }) => {
       </div> 
       </>
       :
-      <div className="success-container"><h4>Success: Comment successfully added</h4></div>
+      <div className="success-container"><h4>Comment successfully added</h4></div>
       }
       
     </>

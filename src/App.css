@@ -306,7 +306,6 @@ select {
     text-align: center;
     top: 50vh;
     background-color: transparent;
-    color: darkgreen;
     border-radius: 5px;
     padding: 5px;
     z-index: 999;
@@ -317,12 +316,14 @@ select {
 }
 
 .success-container h4 {
-  background-color: rgb(134, 185, 57);
+  background-color: rgb(118, 153, 65);
+  color: rgb(0, 34, 0);
+  border: 2px solid rgb(0, 34, 0);
   border-radius: 5px;
   width: fit-content;
   text-align: center;
   height: fit-content;
-  padding: 3px;
+  padding: 5px;
 }
 
 .delete-container {
@@ -332,7 +333,6 @@ select {
   text-align: center;
   top: 50vh;
   background-color: transparent;
-  color: red;
   border-radius: 5px;
   padding: 5px;
   z-index: 999;
@@ -343,12 +343,14 @@ select {
 }
 
 .delete-container h4 {
-  background-color: rgb(245, 190, 180);
+  background-color: rgb(209, 118, 102);
+  color: rgb(124, 12, 12);
+  border: 2px solid rgb(124, 12, 12);
   border-radius: 5px;
   width: fit-content;
   text-align: center;
   height: fit-content;
-  padding: 3px;
+  padding: 5px;
 }
 
 @keyframes show-success {
@@ -426,7 +428,6 @@ select {
   padding: 2px;
   text-transform: capitalize;
   background-color:rgb(46, 46, 46);
-  color: rgb(138, 138, 138);;
 }
 
 .all-news-list h6:hover {
@@ -443,6 +444,7 @@ select {
 
 .news-card-lower h5,h6 {
   border-radius: 5px;
+  color: rgb(185, 185, 185);
 }
 
 .news-card-lower a {
@@ -482,9 +484,13 @@ select {
   justify-content: flex-start;
   align-items: center;
   font-size: 12px;
-  color: rgb(187, 187, 187);
   padding-bottom: 10px;
   margin-left: 10px;
+}
+
+.user-comment h4 {
+  margin-left: 5px;
+  color: rgb(209, 209, 209);
 }
 
 .user-comment .icon {
@@ -526,19 +532,10 @@ select {
   padding: 0 50px;
 }
 
-#navbar__logo h2 {
-  color: #2f80ed;
-  font-size: 2rem;
+.title-navbar {
+  display: flex;
+  align-items: center;
 }
-
-/* #navbar__logo a {
-  background:  linear-gradient(to top, #2f80ed 0%, #56ccf2 100%); 
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-} */
-
 
 #navbar__logo  {
   background:  linear-gradient(to top, #2f80ed 0%, #56ccf2 100%); 
@@ -547,7 +544,7 @@ select {
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   display: list-item;
-  align-items: center;
+  list-style: none;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
