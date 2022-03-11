@@ -529,6 +529,14 @@ select {
   color: #2f80ed;
 }
 
+/* #navbar__logo a {
+  background:  linear-gradient(to top, #2f80ed 0%, #56ccf2 100%); 
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+} */
+
 
 #navbar__logo  {
   background:  linear-gradient(to top, #2f80ed 0%, #56ccf2 100%); 
