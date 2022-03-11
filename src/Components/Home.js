@@ -13,7 +13,7 @@ const Home = () => {
         setIsLoading(true)
         fetchAllArticles().then((data) => {setNewsItems(data)
             setIsLoading(false)
-        }) 
+        })
     }, [])
 
     if (isLoading) {return <div className="overall-loading" ><h3>Loading </h3> <div className="loader"></div></div>;}

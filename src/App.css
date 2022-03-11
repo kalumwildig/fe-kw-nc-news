@@ -74,6 +74,24 @@ select {
   font-size: 0.8rem;
 }
 
+.error-page {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.error-page a {
+  color: white;
+  font-size: 0.7rem;
+}
+
+.error-page h3 {
+  text-align: center;
+}
+
 .overall-loading {
   display: flex;
   flex-direction: row;

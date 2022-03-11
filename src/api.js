@@ -5,32 +5,36 @@ const api = axios.create({
 });
 
 export function fetchAllArticles(sortSelect) {
-  let query = '/articles'
+  let query = "/articles";
 
   if (sortSelect?.sortBy && sortSelect?.order) {
-    query+=`?sort_by=${sortSelect.sortBy}&order=${sortSelect.order}`
+    query += `?sort_by=${sortSelect.sortBy}&order=${sortSelect.order}`;
   }
-  return api.get(query).then(({ data }) => {
-    return data.articles;
-  });
+  return api
+    .get(query)
+    .then(({ data }) => {
+      return data.articles;
+    })
 }
 
 export function fetchArticle(id) {
   return api.get(`/articles/${id}`).then(({ data }) => {
-    return data.article;
-  });
+    return data.article; });
+  // }).catch((error) => {return error.response})
 }
 
 export function fetchAllArticlesByTopic(topic, sortSelect) {
-  let query = `/articles?topic=${topic}`
+  let query = `/articles?topic=${topic}`;
 
   if (sortSelect?.sortBy && sortSelect?.order) {
-    query+=`&sort_by=${sortSelect.sortBy}&order=${sortSelect.order}`
+    query += `&sort_by=${sortSelect.sortBy}&order=${sortSelect.order}`;
   }
 
-  return api.get(query).then(({ data }) => {
-    return data.articles;
-  });
+  return api
+    .get(query)
+    .then(({ data }) => {
+      return data.articles;
+    })
 }
 
 export function patchVotes(id, number) {
@@ -47,20 +51,20 @@ export function postComment(id, commentData) {
   });
 }
 
-export function fetchComments (id) {
-    return api.get(`/articles/${id}/comments`).then(({data}) => {
-        return data.comments;
-    })
+export function fetchComments(id) {
+  return api.get(`/articles/${id}/comments`).then(({ data }) => {
+    return data.comments;
+  });
 }
 
-export function fetchUserByUserName (name) {
-    return api.get(`/users/${name}`).then(({data}) => {
-        return data.user;
-    })
+export function fetchUserByUserName(name) {
+  return api.get(`/users/${name}`).then(({ data }) => {
+    return data.user;
+  });
 }
 
-export function deleteComments (id) {
+export function deleteComments(id) {
   return api.delete(`/comments/${id}`).then((res) => {
-   return res;
-  })
+    return res;
+  });
 }
